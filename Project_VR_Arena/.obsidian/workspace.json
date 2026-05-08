@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "46cfe4a120ccf50f",
+    "type": "split",
+    "children": [
+      {
+        "id": "699a6ff499afdbce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f64206421d5559f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_MOC/05_Tasks/Roadmap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Roadmap"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1832cdeaa2533d48",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec14a4821a0cd1ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4199612ac0bf312",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "66cc83d831a8ebb3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "aec02921b49d16aa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1ae74fbbf0bb9315",
+    "type": "split",
+    "children": [
+      {
+        "id": "207f396d3fad55cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "326ad89c2d611ee9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "00_MOC/main.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для main"
+            }
+          },
+          {
+            "id": "afb10f6544137c9e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "00_MOC/main.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из main"
+            }
+          },
+          {
+            "id": "be9f209527e46443",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "b23156c5d80653f8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
+            }
+          },
+          {
+            "id": "354ab71694fa753e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00_MOC/main.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура main"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "5f64206421d5559f",
+  "lastOpenFiles": [
+    "00_MOC/main.md",
+    "00_MOC/04_Backend.md",
+    "00_MOC/05_Tasks/Roadmap.md",
+    "00_MOC/02_DB/Tariff.md",
+    "00_MOC/02_DB/User.md",
+    "00_MOC/02_DB/Bookings.md",
+    "00_MOC/01_Tarifs/Only_Lounge_10_Weekend.md",
+    "00_MOC/01_Tarifs/Game_Little_Company_Weekend.md",
+    "00_MOC/01_Tarifs/Game_Big_Company_Weekend.md",
+    "00_MOC/01_Tarifs/Game_Big_Company_Weekdays.md",
+    "00_MOC/03_Design.md",
+    "00_MOC/01_Tarifs/Only_Lounge_20_Weekdays.md",
+    "00_MOC/05_Tasks.md",
+    "00_MOC/05_Tasks",
+    "00_MOC/02_DB.md",
+    "00_MOC/02_DB",
+    "00_MOC/01_Tarifs/Game_Little_Company_Weekdays.md",
+    "00_MOC/01_Tarifs/Only_Lounge_30_Weekend.md",
+    "00_MOC/01_Tarifs/Only_Lounge_30_Weekdays.md",
+    "00_MOC/01_Tarifs/Only_Lounge_20_Weekend.md",
+    "00_MOC/01_Tarifs/Only_Lounge_10_Weekdays.md",
+    "00_MOC/01_Tarifs/Tarif_Maxi_Weekdays.md",
+    "00_MOC/01_Tarifs/Tarif_Ultra_Weekend.md",
+    "00_MOC/01_Tarifs/Tarif_Ultra_Weekdays.md",
+    "00_MOC/01_Tarifs/Tarif_Standart_Weekend.md",
+    "00_MOC/01_Tarifs/Tarif_Standart_Weekdays.md",
+    "00_MOC/01_Tarifs/Tarif_Mini_Weekend.md",
+    "00_MOC/01_Tarifs/Tarif_Mini_Weekdays.md",
+    "00_MOC/01_Tarifs",
+    "00_MOC"
+  ]
+}

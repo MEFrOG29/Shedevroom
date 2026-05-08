@@ -1,0 +1,16 @@
+# Python (Бэкенд)
+backend/.venv/
+backend/__pycache__/
+backend/.env
+backend/*.pyc
+
+# Node/React (если во второй папке фронтенд)
+**/node_modules/
+**/.next/
+**/build/
+**/dist/
+
+# Obsidian / Системное
+.obsidian/workspace.json
+.DS_Store
+Thumbs.db
