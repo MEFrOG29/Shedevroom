@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, String, Date, Boolean, Time,DECIMAL, ForeignKey
+from datetime import datetime, timezone
+from enum import Enum
+
+from sqlalchemy import Column, Integer, String, Date, Boolean, Time, DECIMAL, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 
 from database import Base
@@ -16,6 +19,7 @@ class User(Base):
     birthday = Column(Date)
     id_tg = Column(String(20))
     id_vk = Column(String(40))
+    is_admin = Column(Boolean, default=False, nullable=False)
 
 class Tariff(Base):
     __tablename__ = "tariffs"
@@ -47,6 +51,25 @@ class Booking(Base):
     vr_duration = Column(Integer, default=0)
     lounge_duration = Column(Integer, default=0)
     total_duration = Column(Integer, nullable=False)
+    status = Column(String, default="pending", nullable=False)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    is_paid = Column(Boolean, default=False, nullable=False)
 
     user = relationship("User")
     tariff = relationship("Tariff")
+
+class PasswordReset(Base):
+    __tablename__ = "password_resets"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.user_id", ondelete = "CASCADE"))
+    token = Column(String, unique=True, index=True)
+    expires_at = Column(DateTime)
+
+    user = relationship("User")
+
+class BookingStatus(str, Enum):
+    pending = "pending"
+    confirmed = "confirmed"
+    canceled = "canceled"
+    completed = "completed"
