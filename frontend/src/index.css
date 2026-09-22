@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Tight';
+    src: url('./assets/fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-bg-header: #2E2E2E;
+    --color-text-main: #FFFFFF;
+    --color-accent: #FDE000;
+    --color-bg-main: #3D3D3D;
+    --color-hotspot: #D9D9D9;
+
+    --font-tight: "Inter-Tight", sans-serif;
+}
+
+@layer utilities {
+    @keyframes vrGlow {
+        0% {
+            transform: scale(1) rotate(0deg);
+            filter: blur(80px) brightness(1);
+            opacity: 0.7;
+        }
+
+        33% {
+            transform: scale(1.08) translate(10px, -10px) rotate(4deg);
+            filter: blur(90px) brightness(1.2);
+            opacity: 0.85;
+        }
+
+        66% {
+            transform: scale(0.95) translate(-10px, 10px) rotate(-4deg);
+            filter: blur(75px) brightness(0.9);
+            opacity: 0.65;
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+            filter: blur(80px) brightness(1);
+            opacity: 0.7;
+        }
+    }
+
+    .animate-vr-glow {
+        animation: vrGlow 8s ease-in-out infinite;
+    }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(224, 254, 16, 0.3);
+}

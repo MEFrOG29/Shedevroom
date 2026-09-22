@@ -15,7 +15,7 @@ class User(Base):
     login = Column(String(20), unique=True, nullable=False, index=True)
     password_hash = Column(String(255), nullable=False)
     phone = Column(String(12), nullable=False, unique=True)
-    email = Column(String(50), unique=True)
+    email = Column(String(50), unique=True, nullable=True, default=None)
     birthday = Column(Date)
     id_tg = Column(String(20))
     id_vk = Column(String(40))

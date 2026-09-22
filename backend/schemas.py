@@ -1,11 +1,8 @@
 import re
 from enum import Enum
-
 from pydantic import BaseModel, EmailStr, field_validator, Field
 from typing import Optional, Annotated
 from datetime import date, time
-
-
 
 login_str = Annotated[str, Field(min_length=3, max_length=20, pattern=r"^[a-zA-Z0-9_-]+$")]
 name_str = Annotated[str, Field(min_length=2, max_length=30)]
@@ -50,11 +47,19 @@ class User(UserBase):
 class TariffBase(BaseModel):
     title: str
     category: str
+    is_per_person: bool
     base_price: int
     weekend_price: int
-    lounge_hours: int = 0
-    vr_hours: int = 0
+    capacity_treshold: Optional[int] = None
+    fixed_price_weekday: Optional[int] = None
+    fixed_price_weekend: Optional[int] = None
+    lounge_minutes: int = 0
+    vr_minutes: int = 0
+    is_flexible: bool = False
+    default_duration: int = 60
 
+class TariffCreate(TariffBase):
+    pass
 
 class Tariff(TariffBase):
     tariff_id: int
@@ -74,16 +79,29 @@ class BookingBase(BaseModel):
 
     @field_validator('booking_date')
     @classmethod
-    def validate_date(cls, v:date):
+    def validate_date(cls, v: date):
         if v < date.today():
             raise ValueError("Нельзя бронировать на прошедшую дату")
         return v
 
-class BookingCreate(BookingBase):
+class BookingCreate(BaseModel):
+    booking_date: date
+    time_slot: str
     tariff_id: int
-    vr_duration: Optional[int] = Field(None, ge=0)
-    lounge_duration: Optional[int] = Field(None, ge=0)
-    placement: Placement = Placement.concurrent
+    guests_count: int = Field(gt=0, le=99, description="От 1 до 99 гостей")
+    placement: Placement
+    vr_duration: Optional[int] = 0
+    lounge_duration: Optional[int] = 0
+
+    @field_validator('booking_date')
+    @classmethod
+    def validate_date(cls, v: date):
+        if v < date.today():
+            raise ValueError("Нельзя бронировать на прошедшую дату")
+        return v
+
+    class Config:
+        from_attributes = True
 
 class Booking(BookingBase):
     booking_id: int
